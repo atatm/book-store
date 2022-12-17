@@ -1,5 +1,5 @@
 const Book = (book) => {
-  const { title, author } = book('');
+  const { title, author } = book;
   return (
     <div className="books-container">
       <div className="book-info">

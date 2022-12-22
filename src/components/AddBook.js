@@ -16,7 +16,9 @@ const AddBook = () => {
       [element.target.name]: element.target.value,
     });
   };
-
+  const handleClickAdd = () => {
+    dispatch(addBook(book));
+  };
   return (
     <div className="form-container">
       <h3 className="add-book-title">ADD NEW BOOK</h3>
@@ -24,7 +26,7 @@ const AddBook = () => {
         action="/action_page.php"
         onSubmit={(e) => {
           e.preventDefault();
-          dispatch(addBook(book));
+          handleClickAdd();
           e.target.reset();
         }}
       >

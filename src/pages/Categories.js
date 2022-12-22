@@ -6,13 +6,15 @@ const Categories = () => {
   const status = useSelector((state) => state.categories);
   const dispatch = useDispatch();
 
+  const handleCheck = () => {
+    dispatch(statusCheck());
+  };
+
   return (
     <>
       <button
         type="button"
-        onClick={() => {
-          dispatch(statusCheck());
-        }}
+        onClick={handleCheck}
       >
         Check status
       </button>

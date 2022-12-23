@@ -32,6 +32,9 @@
 **book-store**  It is a Single Page App (SPA) that allows users to:
 - add books by it author name and book title.
 - Remove books
+- connect redux with API ✔
+- Add API to this project to GET, POST, and DELETE books ✔
+- Fixed linters ✔
 to build this application, we use React.
 
 # 👁‍🗨 Preview

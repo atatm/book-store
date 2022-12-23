@@ -1,11 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
-const Book = (props) => {
+const Book = ({
+  title, author, id, category,
+}) => {
   const dispatch = useDispatch();
-  // eslint-disable-next-line react/prop-types
-  const { title, author, id } = props;
-
   const handleClickRemove = () => {
     dispatch(removeBook(id));
   };
@@ -13,7 +13,7 @@ const Book = (props) => {
   return (
     <div className="books-container">
       <div className="book-info">
-        <h4 className="book-category">Economy</h4>
+        <h4 className="book-category">{category}</h4>
         <h2 className="book-name">{title}</h2>
         <p className="book-author">{author}</p>
         <div className="book-buttons-container">

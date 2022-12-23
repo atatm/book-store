@@ -1,9 +1,9 @@
-/* eslint-disable react/prop-types */
 import { useDispatch } from 'react-redux';
 import { removeBook } from '../redux/books/books';
 
 const Book = (props) => {
   const dispatch = useDispatch();
+  // eslint-disable-next-line react/prop-types
   const { title, author, id } = props;
 
   const handleClickRemove = () => {
